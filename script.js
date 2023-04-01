@@ -15,15 +15,12 @@ function toggleEvent(item) {
 
 function removeEvent(removeButton) {
 	removeButton.addEventListener("click", function() {
-	removeButton.parentElement.remove();
+		removeButton.parentElement.remove();
 	});
 }
 
 labelArray.forEach(toggleEvent);
-
 removeArray.forEach(removeEvent);
-
-
 
 
 function inputLength() {
@@ -58,9 +55,9 @@ function addListAfterClick () {
 button.addEventListener("click", addListAfterClick);
 
 function addListAfterKeypress(event) {
-		if (inputLength() > 0 && event.keyCode === 13) {
+	if (inputLength() > 0 && event.keyCode === 13) {
 			createListItem();
-			}
+	}
 }
 
 input.addEventListener("keypress", addListAfterKeypress)
