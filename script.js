@@ -1,11 +1,8 @@
-
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var labelArray = ul.querySelectorAll("label");
 var removeArray = ul.querySelectorAll("button");
-
-
 
 function toggleEvent(item) {
 	item.addEventListener("click", function () {
@@ -39,10 +36,8 @@ function createListItem() {
 	removeButton.appendChild(document.createTextNode("x"));
 	li.appendChild(removeButton);
 	ul.appendChild(li);
-  
 	toggleEvent(item);
 	removeEvent(removeButton);
-
 	input.value = "";
 }
 
@@ -61,7 +56,3 @@ function addListAfterKeypress(event) {
 }
 
 input.addEventListener("keypress", addListAfterKeypress)
-
-
-
-
